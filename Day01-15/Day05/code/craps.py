@@ -17,11 +17,16 @@ from random import randint
 money = 1000
 while money > 0:
     print('你的总资产为:', money)
+    
+    #跳出循环的条件，单独设置
     needs_go_on = False
+
     while True:
+        #输入
         debt = int(input('请下注: '))
         if debt > 0 and debt <= money:
             break
+    
     first = randint(1, 6) + randint(1, 6)
     print('玩家摇出了%d点' % first)
     if first == 7 or first == 11:
